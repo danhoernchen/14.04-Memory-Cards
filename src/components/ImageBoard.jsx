@@ -8,13 +8,13 @@ function ImageBoard({ gameOver, setGameOver, dogType }) {
     let images;
     switch (dogType) {
       case "other":
-        images = import.meta.glob(`other/*.jpg`);
+        images = import.meta.glob(`/other/*.jpg`);
         break;
       case "dachshund":
-        images = import.meta.glob(`dachshund/*.jpeg`);
+        images = import.meta.glob(`/dachshund/*.jpeg`);
         break;
       default:
-        images = import.meta.glob(`chihuahua/*.jpeg`);
+        images = import.meta.glob(`/chihuahua/*.jpeg`);
     }
     const newArr = [];
     for (const path in images) {
