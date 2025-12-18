@@ -14,7 +14,10 @@ function ImageBoard({ gameOver, setGameOver, dogType }) {
         images = import.meta.glob(`/dachshund/*.jpeg`);
         break;
       default:
-        images = import.meta.glob(`/chihuahua/*.jpeg`);
+        images = import.meta.glob(`/chihuahua/*.jpeg`, {
+          eager: true,
+          import: "default",
+        });
     }
     const newArr = [];
     for (const path in images) {
