@@ -1,13 +1,12 @@
 import { useState } from "react";
 
-function ImageCard({ image, order, clicks, setClicks, setGameOver }) {
+function ImageCard({ image, order, setClicks, setGameOver }) {
   const [clicked, setClicked] = useState(false);
   function handleClick() {
     if (clicked) {
       setGameOver(true);
     }
     setClicked(true);
-    console.log(clicked);
     setClicks((clicks) => clicks + 1);
   }
   return (
