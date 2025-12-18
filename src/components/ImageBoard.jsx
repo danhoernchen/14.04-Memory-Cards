@@ -8,19 +8,19 @@ function ImageBoard({ gameOver, setGameOver, dogType }) {
     let images;
     switch (dogType) {
       case "other":
-        images = import.meta.glob(`/public/other/*.jpg`, {
+        images = import.meta.glob(`/other/*.jpg`, {
           eager: true,
           as: "url",
         });
         break;
       case "dachshund":
-        images = import.meta.glob(`/public/dachshund/*.jpeg`, {
+        images = import.meta.glob(`/dachshund/*.jpeg`, {
           eager: true,
           as: "url",
         });
         break;
       default:
-        images = import.meta.glob(`/public/chihuahua/*.jpeg`, {
+        images = import.meta.glob(`/chihuahua/*.jpeg`, {
           eager: true,
           as: "url",
         });
