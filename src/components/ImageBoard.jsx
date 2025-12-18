@@ -35,7 +35,6 @@ function ImageBoard({ gameOver, setGameOver, dogType }) {
   }
   const [arr, setArr] = useState([]);
   const [imageArr, setImageArr] = useState(arr);
-  useEffect(() => setImages(), [dogType]);
 
   function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -44,7 +43,8 @@ function ImageBoard({ gameOver, setGameOver, dogType }) {
       setImageArr(array);
     }
   }
-
+  useEffect(() => setImages(), []);
+  useEffect(setImages, [dogType]);
   useEffect(() => () => shuffle(imageArr), [clicks]);
   return (
     <>
