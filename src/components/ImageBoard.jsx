@@ -8,7 +8,7 @@ function ImageBoard({ gameOver, setGameOver, dogType }) {
     let images;
     switch (dogType) {
       case "other":
-        images = import.meta.glob(`/public/other/*.jpg`);
+        images = import.meta.glob(`/other/*.jpg`);
         break;
       case "dachshund":
         images = import.meta.glob(`/public/dachshund/*.jpeg`);
