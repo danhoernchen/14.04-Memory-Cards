@@ -44,7 +44,7 @@ function ImageBoard({ gameOver, setGameOver, dogType }) {
     }
   }
   useEffect(() => setImages(), []);
-  useEffect(setImages, [dogType]);
+  useEffect(() => setImages(), [dogType]);
   useEffect(() => () => shuffle(imageArr), [clicks]);
   return (
     <>
